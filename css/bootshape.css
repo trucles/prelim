@@ -1,0 +1,802 @@
+/*
+TEMPLATE
+Name: Zoo Planet
+Version: 1.0
+Created: 23 January 2014
+
+AUTHOR
+Design and code by: http://www.bootshape.com
+Free stock photos by: http://www.bootshape.com
+
+Read full license: http://www.bootshape.com/license.php
+
+CREDITS
+Background: http://subtlepatterns.com/ (extra_clean_paper)
+Fonts: http://www.google.com/fonts (Actor, Duru_Sans)
+
+SUPPORT
+E-mail: bootshape.com@gmail.com
+Contact: http://www.bootshape.com/contact.php
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image:url('../img/bg.png');
+  background-repeat:repeat;
+}
+
+p {
+  margin: 0 0 20px;
+}
+
+hr {
+  border-width:4px;
+  width:80%;
+  border-color:#c1c1c1;
+  background-color:#c1c1c1;
+}
+
+/*Header Styling*/
+.navbar {
+  background-image:url('../img/bg.png');
+  background-repeat:repeat;
+  min-height: 70px;
+  font-size: 120%; 
+
+}
+
+.navbar-default .navbar-nav > .active > a {
+	min-height: 70px;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color:black;
+	padding-top:25px;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+  color:#B54D5B;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover {
+  color:#B54D5B;
+}
+
+.navbar-brand {
+  margin-top:-5px;
+  margin-bottom:-100px;
+  margin-left:0px;
+  margin-right:-30px;
+}
+
+.navbar-right {
+	padding-right:15px;
+}
+
+/* Navbar & Menu for XS Screens */
+.logo-xs {
+  width:273px;
+  position:block;
+  margin:5px auto 0px auto;
+}
+  
+.menuxs {
+  margin-bottom:5px;
+}
+
+.accordionxs{
+	text-align:center;
+	list-style-type:none;
+  margin-top:5px;
+  margin-bottom:10px;
+  color:grey;
+}
+
+.accordionxs>a {
+  color:black;
+}
+
+/* End Navbar & Menu Styling */
+
+#logo {
+  background: url(../img/NSAA_Logo.jpg) no-repeat;
+  background-size: contain;
+  margin-top: 10px;
+  height:80px;
+  width:200px;
+}
+
+.divider {
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: grey;
+}
+
+#logo-text {
+  position:relative;
+  left:185px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #B54D5B;
+  overflow-x: hidden;
+  padding-top: 20px;
+  margin-top:70px;
+}
+
+/*Jumbotron Styling*/
+.jumbotron {
+  max-width:60%;
+  margin-left:20%;
+  margin-right:20%;
+  background-color: transparent;
+  padding: 10px 0 0 0;
+}
+
+.carousel-indicators li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 1px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #ffffff \9;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+}
+
+.carousel-indicators .active {
+  width: 12px;
+  height: 12px;
+  margin: 0;
+  background-color: #ffffff;
+}
+
+.carousel-caption {
+  position: absolute;
+  right: 15%;
+  bottom: -5px;
+  left: 15%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 0px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-family:'Lato', sans-serif;
+  font-size: 15px;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+/*Jumbotron adjustments for XS screens*/
+@media (max-width:767px) {
+  .carousel-indicators li{
+      width:8px;
+      height:8px;
+      margin-bottom: -5px;
+  }
+  .carousel-indicators .active {
+      width:10px;
+      height:10px;
+      margin-bottom:-5px;
+  }
+  .carousel-caption {
+      font-size: 12px;
+  }
+}
+
+/*Main Content Styling*/
+.bookingbutton {
+  position:block;
+  width:180px;
+  height:50px;
+  border:2px solid black;
+  border-radius:5px;
+  background-color:#B54D5B;
+  margin: 0px auto;
+  text-align:center;
+  font-family:"Lato";
+  color:#fff;
+  font-size:20px;
+  text-decoration:none;
+  line-height:46px;
+}
+
+.bookingbutton:hover {
+  position:relative;
+  top: -5px;
+  left:5px;
+  text-decoration:none;
+}
+
+.bookingbutton:active {
+    background-color:navy;
+}
+
+.menubookingbutton {
+  position:fixed;
+  bottom:0px;
+  right:0px;
+  width:120px;
+  height:20px;
+  border:2px solid black;
+  border-bottom:0px;
+  border-right:0px;
+  border-radius:5px;
+  background-color:#B54D5B;
+  margin: 0px auto;
+  text-align:center;
+  font-family:"Lato";
+  color:#fff;
+  font-size:15px;
+  text-decoration:none;
+  line-height:16px;
+  z-index: 1;
+}
+
+.menubookingbutton:hover {
+  color:black;
+}
+
+.menubookingbutton:active {
+    background-color:navy;
+}
+
+.backtotop {
+    float:right;
+    font-size:0.75em;
+    font-family:"Lato";
+}
+
+.backtotop a {
+  color:#252663;
+}
+
+.backtotop:hover {
+  color:#AED6F1;
+}
+
+/*Index Content Styling*/
+.fall {
+  max-width: 12%;
+  margin-left:44%;
+  margin-right:44%;
+}
+
+.welcome {
+  text-align:center;
+  vertical-align:middle;
+  font-family: 'Lato', sans-serif;
+  font-size: 24px;
+  max-width: 90%;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right:auto;
+}
+
+.google-maps {
+  position: relative;
+  padding-bottom: 75%;
+  height: 0;
+  overflow: hidden;
+}
+
+.event {
+  border-bottom: 1px solid #dcdcdc;
+  padding-bottom: 30px;
+}
+.event + .event {
+    padding-top: 30px;
+}
+.event .date {
+  margin-bottom: 7px;
+  color: #2a6496;
+}
+
+/*Thumbnail Sizing for L Screens */
+@media (min-width: 1200px) {
+  .caption>p {
+  	min-height:100px;
+  }
+}
+
+/*Thumbnail Sizing for M Screens */
+@media (min-width: 992px) and (max-width:1199px) {
+  .caption>p {
+  	min-height:130px;
+  }
+}
+
+/*Thumbnail Sizing for S Screens */
+@media (min-width: 768px) and (max-width:991px) {
+  .caption>p {
+  	min-height:100px;
+  }
+}
+
+/*Classes Page Styling*/
+.banners {
+  height:20px;
+  width: 100%;
+  margin-bottom:15px;
+  background-color:#B54D5B;
+  text-align:center;
+}
+
+.btn {
+  background-color:#B54D5B;
+  border:none;
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:auto;
+  margin-bottom:20px;
+}
+
+.btn-info {
+  border:none;
+}
+
+.btn-info:active:hover, .btn-info.active:hover, .open > .dropdown-toggle.btn-info:hover, .btn-info:active:focus, .btn-info.active:focus, .open > .dropdown-toggle.btn-info:focus, .btn-info:active.focus, .btn-info.active.focus,
+.open > .dropdown-toggle.btn-info.focus {
+  background-color: #873695;
+  border:none;
+}
+
+.btn-info:hover, .btn-primary:hover {
+  background-color:#b890bf;
+  border:none  
+}
+
+.btn-info:active, .btn-info.active, .open > .dropdown-toggle.btn-info {
+  background-color:#B54D5B;
+}
+
+.btn:active {
+  background-color:#873695;
+  border:none;
+}
+
+.btn-info:focus, .btn-primary:focus {
+  background-color:#B54D5B;
+  border:none;
+}
+
+.collapsed:hover {
+  background-color:#b890bf;
+  border:none;
+}
+
+.btn-info.active:hover, .btn-primary.active:hover {
+  background-color:#b890bf;
+  border:none;
+}
+
+.btn-info:active:focus, .btn-primary:active:focus {
+  background-color:#873695;
+  border:none;
+}
+
+.classtitle {
+  font-size:30px;
+  font-family:"Lato";
+  margin-top:0px;
+  margin-bottom:20px;
+  text-decoration: underline;
+  color:black;
+}
+
+@media (max-width:767px) {
+  .classtitle {
+   font-size:30px;
+   font-family:"Lato";
+   margin-top:0px;
+   margin-bottom:20px;
+   text-decoration: underline;
+   background-color:#B54D5B;
+   color:white;
+  }
+}
+
+.classdetails {
+	text-align:justify;
+	margin-top: 10px;
+	padding-top:0px;
+	padding-right:20px;
+}
+
+.borderright {
+	border-right:1px solid grey;
+}
+
+.borderboth {
+	border-left:1px solid grey;
+	border-right:1px solid grey;
+}
+
+.borderleft {
+	border-left:1px solid grey;
+}
+
+.borderbottom {
+	border-bottom: 1px solid grey;
+}
+
+.notopmargin {
+	margin-top:0px;
+}
+
+.classpic {
+  display:block;
+  width:100%;
+  margin:auto;
+}
+
+.trapezeclass {
+  padding:10px;
+  width:100%;
+  font-family:"Lato";
+  font-size:120%;
+}
+
+.row2 {
+  width:85%;
+  margin-left: auto;
+  margin-right:auto;
+}
+
+.silkspic {
+  float:left;
+  margin-bottom:20px;
+}
+
+.silksclass {
+  float:right;
+  text-align: justify;
+  font-family:"Lato";
+}
+
+.lyrapic {
+  margin-bottom:20px;
+  text-align:right;
+}
+
+.lyraclass {
+  float:left;
+  text-align:justify;
+  font-family:"Lato";
+}
+
+.staticpic {
+  float:left;
+  margin-bottom:20px;
+}
+
+.staticclass {
+  float:right;
+  text-align: justify;
+  font-family:"Lato";
+}
+
+.groundtitle {
+  display:block;
+  position:relative;
+  top:10px;
+  font-weight:bold;
+  font-size:1.5em;
+  font-family:"Lato";
+*/}
+
+.grounddescription {
+  text-align: justify; 
+  font-family:"Lato";
+  margin-bottom:10px;
+  padding-top:20px;
+  padding-left:0px;
+  padding-right:0px;
+  padding-bottom:0px;
+}
+
+/*Classes Page Adjustment for S Screens*/
+@media (max-width: 992px){
+  .classdetails {
+  	text-align:justify;
+  	border-right:none;
+  	border-left:none;
+  	border-bottom:1px solid grey;
+  	padding-bottom:5px;
+  }
+
+  .bordernone {
+  	border:none;
+  }
+}
+
+/*Classes Page Adjustment for XS Screens*/
+@media (max-width: 767px){
+  .silkspic {
+    float:none;
+    text-align:center;
+  }
+
+  .lyrapic {
+    float:none;
+    text-align:center;
+    margin-top:0px;
+    margin-bottom:20px;
+    margin-left:0px;
+    margin-right:0px;
+  }
+
+  .staticpic {
+    float:none;
+    text-align:center;
+  }
+  .staticclass{
+    padding:0px;
+  }
+}
+
+/* Colophon Section */
+.colophon {
+  background-color:#B54D5B;
+  text-align:center;
+}
+
+.contact {
+  display:inline-block;
+  background-color:#B54D5B;
+  color:white;
+  line-height:40px;
+  font-size:0.9em;
+  font-family:"Lato";
+}
+
+.social {
+  float:right;
+  display:inline-block;
+  background-color:#B54D5B;
+  color:white;
+  line-height:40px;
+  font-size:0.9em;
+  font-family:"Lato";
+}
+
+.colophon-icon {
+  background-color: #ffffff;
+  border-radius: 50%;
+  color: #B54D5B;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  margin-left:10px;
+  margin-right:10px;
+  text-align:center;
+}
+
+.contact:hover {
+  text-decoration:underline;
+  color:#ffffff;
+}
+
+.colophon-icon:hover {
+  width:35px;
+  height:35px;
+  line-height: 35px;
+  color:navy;
+  font-size:1.1em;
+}
+
+/*Colophon Adjustment for XS and XXS Screens*/
+@media (min-width: 480px) and (max-width:767px){
+  .social{
+	text-align:center;
+  }
+
+}
+
+
+@media (max-width: 479px){
+  .social{
+	text-align:center;
+  }
+
+}
+
+/*Footer Styling*/
+.footer {
+  margin-top:10px;
+  line-height:30px;
+}
+
+.footer a {
+  color:#000; 
+}
+
+.footer a:hover {
+  text-decoration:underline;
+}
+
+.faqtitle {
+  font-family:'Lato', sans-serif;
+	font-size:30pt;
+	color:white;
+	margin:30px;
+}
+
+@media (max-width: 767px){
+  .faqtitle {
+    font-size:15pt;
+  }
+}
+
+.faqbody {
+  background-image: url('../img/faqbackground.jpg');
+  min-height:850px;
+  margin-bottom:0px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #ddd;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 90%;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.accordion:after {
+	content:'\002B';
+	float:right;
+	margin-left:5px;
+}
+
+.accordion.active:after {
+	content: "\2212";
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.accordion:active, .accordion:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 10px 18px 0px 10px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 0;
+}
+
+.rightaccordion {
+	float:right;
+}
+
+.textleft {
+	text-align:left;
+}
+
+.panel ul {
+	list-style-type: "- ";
+	padding-left: 30px;
+}
+
+.waiver {
+	background-image:url('../img/sample.jpg');
+	height:100%;
+}
+
+.eventspic {
+  display:block;
+  width:80%;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom: 10px;
+}
+
+.eventsblurb {
+  width:70%;
+  font-size:1.5em;
+  text-align:center;
+  margin:auto;
+}
+
+.events table {
+  min-height:50px;
+  font-size:1.2em;
+  text-align:center;
+  width:100%;
+  background-color:#B54D5B;
+  margin-bottom:20px;
+  margin-right:-10px;
+}
+
+.events td, .events td a {
+  color:white;
+  text-align:center;
+  vertical-align:middle;
+  margin-left:10px;
+}
+
+@media (max-width:767px) {
+  .events table {
+    display:none;
+  }
+}
+
+.pricingtitle {
+  font-family:'Lato', sans-serif;
+  font-size:30pt;
+  color:white;
+  background-color:#B54D5B;
+  margin:30px;
+}
+
+/* The Modal (background) */
+.modal {
+display: block;/* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 10%;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.modal-content p {
+  font-size:1.8em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
