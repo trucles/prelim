@@ -268,6 +268,12 @@ hr {
 }
 
 /*Index Content Styling*/
+.intropic {
+  width: 60%;
+  margin-left:20%;
+  margin-right:20%;
+}
+
 .fall {
   max-width: 12%;
   margin-left:44%;
@@ -574,9 +580,10 @@ hr {
 }
 
 .social a {
-  margin-left:30px;
-  margin-right:30px;
+  margin-left:20px;
+  margin-right:20px;
 }
+
 
 .colophon-icon {
   background-color: #ffffff;
@@ -586,7 +593,7 @@ hr {
   width: 30px;
   height: 30px;
   line-height: 30px;
-  margin-left:10px;
+  margin-left:0px;
   margin-right:10px;
   text-align:center;
 }
@@ -648,7 +655,7 @@ hr {
 }
 
 .faqbody {
-  background-image: url('../img/faqbackground.jpg');
+  background-image: url('../img/fadqbackground.jpg');
   min-height:850px;
   margin-bottom:0px;
   background-position: center;
@@ -747,6 +754,14 @@ hr {
   margin-left:10px;
 }
 
+.facilitypic {
+  display:block;
+  width:60%;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom: 10px;
+}
+
 @media (max-width:767px) {
   .events table {
     display:none;
@@ -789,6 +804,11 @@ display: block;/* Hidden by default */
   font-size:1.8em;
   text-align: center;
   vertical-align: middle;
+}
+
+.modal-content div {
+  font-size:1.4em;
+  text-align:center;
 }
 
 /* The Close Button */
