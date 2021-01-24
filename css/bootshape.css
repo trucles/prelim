@@ -268,12 +268,6 @@ hr {
 }
 
 /*Index Content Styling*/
-.intropic {
-  width: 60%;
-  margin-left:20%;
-  margin-right:20%;
-}
-
 .fall {
   max-width: 12%;
   margin-left:44%;
@@ -581,9 +575,8 @@ hr {
 
 .social a {
   margin-left:20px;
-  margin-right:20px;
+  margin-right:0px;
 }
-
 
 .colophon-icon {
   background-color: #ffffff;
@@ -593,7 +586,7 @@ hr {
   width: 30px;
   height: 30px;
   line-height: 30px;
-  margin-left:0px;
+  margin-left:10px;
   margin-right:10px;
   text-align:center;
 }
@@ -655,7 +648,7 @@ hr {
 }
 
 .faqbody {
-  background-image: url('../img/fadqbackground.jpg');
+  background-image: url('../img/faqbackground.jpg');
   min-height:850px;
   margin-bottom:0px;
   background-position: center;
@@ -776,6 +769,37 @@ hr {
   margin:30px;
 }
 
+.calendar {
+  margin-top:20px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom:20px;
+}
+
+table, td, th, tr {
+  font-size:14px;
+  text-align:center;
+  border:1.5px solid black;
+  padding: 10px;
+}
+
+.calendar th {
+  font-size:18px;
+}
+
+.instructorpic {
+  float:left;
+}
+
+.instructortext {
+  font-size:16px;
+  font-family:'Lato', sans-serif;
+}
+
+.greyedout {
+  color:grey;
+}
+
 /* The Modal (background) */
 .modal {
 display: block;/* Hidden by default */
@@ -804,11 +828,6 @@ display: block;/* Hidden by default */
   font-size:1.8em;
   text-align: center;
   vertical-align: middle;
-}
-
-.modal-content div {
-  font-size:1.4em;
-  text-align:center;
 }
 
 /* The Close Button */
