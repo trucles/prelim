@@ -134,6 +134,11 @@ hr {
   margin-top:70px;
 }
 
+.coverphoto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /*Jumbotron Styling*/
 .jumbotron {
   max-width:60%;
@@ -289,6 +294,20 @@ hr {
   margin-top: 10px;
   margin-left: auto;
   margin-right:auto;
+}
+
+.partner {
+  text-align: center;
+  font-size: 30px;
+  max-width:90%;
+  margin-left:auto;
+  margin-right: auto;
+}
+
+.partnerphoto {
+  max-height:200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .google-maps {
